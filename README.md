@@ -41,26 +41,23 @@ npm install
 npm run dev
 ```
 
-```
-
 ## Features to Implement
 
- - Add new product (Fields: name, code, price, stockQty)
+- Add new product (Fields: name, code, price, stockQty)
 
- - View list of products
+- View list of products
 
- - Search product by name or code
+- Search product by name or code
 
+## POS / Sales System
 
- ## POS / Sales System
+- Add product to cart from search results
 
- - Add product to cart from search results
+- Increment/decrement quantity in cart
 
- - Increment/decrement quantity in cart
+- Display total price in cart
 
- - Display total price in cart
-
-  ## Checkout:
+## Checkout:
 
     - Submit cart data to backend
 
@@ -71,7 +68,6 @@ npm run dev
     - Reset cart
 
     - Remove item from cart
-
 
 ## Frontend Technologies Used
 
@@ -105,9 +101,7 @@ npm run dev
 
 - JWT Decode – For decoding JWT tokens
 
-
 ## 🧑‍💻 Author
+
 Zamirul Kabir
 Full-Stack Developer
-
-```
