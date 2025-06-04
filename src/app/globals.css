@@ -1,0 +1,478 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-base: #0b0c10;
+  --color-primary-muted: #b5b7c8;
+  --color-secondary-base: #787f90;
+  --color-info-base: #111217;
+  --color-blue-base: #0064f7;
+  --color-info-muted: #b5b7c8;
+  --color-warning-base: #e4a11b;
+  --color-danger-base: #fb545494;
+  --color-success-base: #157f40;
+  --color-neutral-base: #444444;
+  --color-neutral-muted: #19191f;
+  --color-black-base: #181a20;
+  --color-black-solid: #000000;
+  --color-black-muted: #151819;
+}
+
+@layer base {
+  .paginateItem {
+    @apply px-4 py-2 bg-[#212327] border border-[#4B4C51] rounded-lg w-9 h-10 flex items-center justify-center text-white cursor-pointer;
+  }
+  .btn {
+    /* @apply px-4 py-2 bg-gradient-to-r from-[#c2e936] to-[#06D001]  rounded-md flex items-center justify-center text-white cursor-pointer; */
+    @apply px-4 h-11  bg-[#3383F9] w-full text-center  rounded-md flex items-center justify-center text-white cursor-pointer;
+    /* @apply px-4 py-2 bg-gradient-to-r from-pink-600 to-purple-500  rounded-md flex items-center justify-center text-white cursor-pointer; */
+  }
+
+  .input_style {
+    @apply w-full focus:bg-none border border-[#26272F] focus:border focus:border-[#26272F] bg-[#19191F] placeholder:text-[#787F90] rounded-lg focus:outline-none px-4 py-[9px] text-[15px] text-[#b5b7c8]  placeholder:text-sm;
+  }
+  .table_header {
+    @apply text-lg rounded-t-lg text-[#b5b7c8] font-semibold border border-[#26272F] bg-[#111217] py-3 px-4;
+  }
+  .table_section {
+    @apply min-w-full bg-[#181a20] text-[#787f90]  rounded-b-lg;
+  }
+  .table_row {
+    @apply bg-[#181a20]  text-start text-[13px] border  border-[#26272F];
+  }
+  .table_th {
+    @apply py-4 px-4 text-start border  border-[#26272F];
+  }
+  .tbody_tr {
+    @apply bg-[#111217] hover:bg-[#14151a]  z-[500] border-[#26272F] rounded-b-lg border text-[#b5b7c8] text-[13px] px-[10px];
+  }
+  .add_form_section {
+    @apply border bg-[#111217] border-[#26272F] rounded-lg p-4;
+  }
+  .add_section_title {
+    @apply border-b text-lg text-[#b5b7c8] pb-5 border-[#26272F];
+  }
+}
+.text-gradient {
+  background: linear-gradient(90deg, #0888ff 0.01%, #6cffe4 21.12%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.react-datepicker-wrapper {
+  width: 100% !important;
+}
+
+.ReactCollapse--collapse {
+  transition: height 800ms;
+}
+
+/* sidebarScroll  */
+.sidebarScroll::-webkit-scrollbar {
+  width: 6px;
+}
+.sidebarScroll::-webkit-scrollbar-track {
+  background: #000;
+}
+.sidebarScroll::-webkit-scrollbar-thumb {
+  background-color: #1557b9;
+  border-radius: 10px;
+}
+
+/* Define keyframes for the gradient animation */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 0%; /* Start from the left */
+  }
+  100% {
+    background-position: 250% 0%; /* Move towards the right */
+  }
+}
+
+/* Apply animation to the element */
+.animated-gradient {
+  background: linear-gradient(
+    90deg,
+    #60f1e7 0%,
+    #0b8bfe 50%,
+    #60f1e7 100% /* Gradient with three colors */
+  ); /* Your 3-color gradient */
+  background-size: 250% 100%; /* Make the background larger than the element */
+  animation: gradientAnimation 3s linear infinite; /* Speed is set to 3 seconds, and it will loop infinitely */
+}
+
+/* css base animation  */
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+.animate-slideIn {
+  animation: slideIn 0.5s ease-in-out forwards;
+}
+
+.delay-100 {
+  animation-delay: 0.1s;
+}
+
+.delay-200 {
+  animation-delay: 0.2s;
+}
+
+.delay-300 {
+  animation-delay: 0.3s;
+}
+
+.card {
+  position: relative;
+
+  width: 100%;
+  /* height: 500px; */
+  background: #111217;
+  /* background: #1c1f2b; */
+  text-align: center;
+  border-radius: 16px;
+  border: #26272f solid 2px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  -ms-flex-align: center;
+  align-content: center;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  width: 170px;
+  height: 170%;
+  border: #26272f solid 2px;
+  /* background-image: conic-gradient(#ff4545, #00ff99, #006aff, #ff0095, #ff4545); */
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  background: linear-gradient(#00ccff, #d500f9);
+  animation: rotate 4s linear infinite;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  background: #111217;
+  inset: 5px;
+  border-radius: 16px;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.box {
+  position: relative;
+
+  width: 100%;
+  /* height: 500px; */
+  background: #111217;
+  text-align: center;
+  border-radius: 10px;
+
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  -ms-flex-align: center;
+  align-content: center;
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.box::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 290%;
+  background-image: conic-gradient(
+    from var(--angle),
+    #ff4545,
+    #00ff99,
+    #006aff,
+    #ff0095,
+    #ff4545
+  );
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  /* z-index: -1; */
+  padding: 3px;
+  border-radius: 10px;
+  animation: 3s spin linear infinite;
+}
+.box::after {
+  content: "";
+  position: absolute;
+  background: #111217;
+  inset: 5px;
+  border-radius: 10px;
+}
+@keyframes spin {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
+}
+.card-gradient {
+  position: relative;
+  width: 100%;
+  background: #111217;
+  text-align: center;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Align content vertically */
+  overflow: hidden;
+}
+
+.card-gradient::before {
+  content: "";
+  position: absolute;
+  width: 100%; /* Full width */
+  height: 100%;
+  background: linear-gradient(45deg, #00ccff, #d500f9);
+  border-radius: 16px; /* Match the parent border radius */
+  padding: 2px; /* Thickness of the border */
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); /* Mask the content area */
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); /* Mask the content area */
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  pointer-events: none; /* Prevent interaction */
+}
+
+.card-gradient > * {
+  position: relative;
+  z-index: 1; /* Ensure the content is above the border */
+}
+
+.containerRing {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background: #011015; */
+}
+
+.ring {
+  width: 200px;
+  height: 200px;
+  border: 4px solid #011015;
+  border-radius: 50%;
+  position: absolute;
+}
+.ring:nth-child(1) {
+  border-bottom-width: 8px;
+  border-color: rgb(255, 0, 255);
+  animation: rotate1 2s linear infinite;
+}
+.ring:nth-child(2) {
+  border-right-width: 8px;
+  border-color: rgb(0, 247, 255);
+  animation: rotate2 2s linear infinite;
+}
+.ring:nth-child(3) {
+  border-right-width: 8px;
+  border-color: rgb(0, 255, 13);
+  animation: rotate3 2s linear infinite;
+}
+@keyframes rotate1 {
+  0% {
+    transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+  }
+}
+@keyframes rotate2 {
+  0% {
+    transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(50deg) rotateY(-10deg) rotateZ(360deg);
+  }
+}
+@keyframes rotate3 {
+  0% {
+    transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+  }
+}
+
+/* select date  */
+
+/* Custom scrollbar for select elements */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #888 #a7a4a4;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 7px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1efef;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #96939359;
+  border-radius: 20px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #a7a1a1;
+}
+
+.logo {
+  text-shadow: 1px 4px 7.1px #000;
+  font-family: "Headline Bangla Regular Unicode";
+  font-size: 23px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  background: linear-gradient(to right, #2563eb, #ec4899);
+  /* background: linear-gradient(90deg, #028ee6 0.32%, #d02be6 93.68%); */
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.btn-primary {
+  display: flex;
+  height: 40px;
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+  border-radius: 4px;
+  background: #3383f9;
+}
+
+/* dto animation  */
+
+/* loading animation  */
+/* Initial Drop Animation - 400px above to center */
+@keyframes drop {
+  0% {
+    transform: translateY(-400px) scale(1.5);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Normal Bounce Animation */
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Combine Drop and Bounce Animations */
+.dot {
+  animation: drop 1s ease-out forwards, bounce 1s ease-in-out 1s infinite;
+}
+
+/* Delays for sequential drop */
+.delay-0 {
+  animation-delay: 0s;
+}
+
+.delay-300 {
+  animation-delay: 0.3s;
+}
+
+.delay-600 {
+  animation-delay: 0.6s;
+}
+
+/* sidebar  */
+
+.active-sidebar {
+  display: flex;
+  height: 44px;
+  padding: 8px 12px;
+  justify-content: start;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+}
+.active-sidebar span {
+  color: #b5b7c8;
+  /* font-family: Poppins; */
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.active-sidebar-active {
+  border-radius: 4px;
+  background: linear-gradient(90deg, #4b00ed 0%, rgba(24, 46, 94, 0.58) 100%);
+}
+
+/* utilities  */
+.text-primary-color {
+  color: #b5b7c8;
+}
+/* utilities  */
+.bg-info-base {
+  background: #111217;
+}
+.bg-primary-base {
+  color: #0b0c10;
+}
+.text-primary-muted {
+  color: #b5b7c8;
+}
+.text-blue-base {
+  color: #0064f7;
+}
+
+.primary-border {
+  border-color: #b5b7c8;
+}
