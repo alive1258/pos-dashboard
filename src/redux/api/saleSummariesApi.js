@@ -18,7 +18,7 @@ export const saleSummariesApi = baseApi.injectEndpoints({
     // Query for fetching all sale-summaries
     getAllSaleReport: build.query({
       query: (arg) => ({
-        url: `${SALE_URL}/sale-reports`,
+        url: `${SALE_URL}`,
         method: "GET",
         params: arg,
       }),

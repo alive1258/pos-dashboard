@@ -1,36 +1,113 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## 🛒 POS & Inventory Management System
 
-## Getting Started
+This is a full-stack Point-of-Sale (POS) and Inventory Management System built with Next.js, NestJS, and PostgreSQL. It allows users to manage products, track inventory, and perform sales transactions seamlessly. The system includes features like product creation, and an intuitive cart checkout process. It is designed for small to medium businesses to streamline their retail operations efficiently.
+
+## Getting Started Setup and Usage
 
 First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Setup and Usage
+
+- `Clone the Repository:`
+
+```js
+git clone https://github.com/alive1258/pos-dashboard
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- `Navigate to Project Directory:`
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```js
+cd [Project Directory]
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `Create a .env file in the root folder of the frontend project.`
+- `Add the following environment variable`
 
-## Learn More
+```js
+  NEXT_PUBLIC_API_URL=http://localhost:5000/api/v1
 
-To learn more about Next.js, take a look at the following resources:
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `Install Dependencies::`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```js
+npm install
+```
 
-## Deploy on Vercel
+- `Start Development Server:`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```js
+npm run dev
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+
+## Features to Implement
+
+ - Add new product (Fields: name, code, price, stockQty)
+
+ - View list of products
+
+ - Search product by name or code
+
+
+ ## POS / Sales System
+
+ - Add product to cart from search results
+
+ - Increment/decrement quantity in cart
+
+ - Display total price in cart
+
+  ## Checkout:
+
+    - Submit cart data to backend
+
+    - Reduce product stock based on cart
+
+    - Show success message
+
+    - Reset cart
+
+    - Remove item from cart
+
+
+## Frontend Technologies Used
+
+- React 19 – For building the user interface
+
+- Next.js 15 – React framework for SSR and routing
+
+- Tailwind CSS – Utility-first CSS framework for rapid UI development
+
+- React Hook Form – For efficient form validation and management
+
+- React Redux & Redux Toolkit – For state management
+
+- Redux Persist – To persist Redux state across sessions
+
+- React Toastify – For elegant toast notifications
+
+- React Icons – Popular icon library for React
+
+- React Datepicker – A customizable date picker component
+
+- React Paginate – For pagination UI
+
+- Recharts – For data visualization and charting
+
+- SweetAlert2 – For beautiful and customizable modals and alerts
+
+- NextJS Toploader – To show progress/loading bar on route changes
+
+- JS Cookie & Cookies-Next – For managing cookies (including JWT tokens)
+
+- JWT Decode – For decoding JWT tokens
+
+
+## 🧑‍💻 Author
+Zamirul Kabir
+Full-Stack Developer
+
+```
